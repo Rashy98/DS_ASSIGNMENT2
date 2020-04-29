@@ -1,0 +1,45 @@
+1. Download the github repository as a zip file or clone the project.
+
+2. Unzip it.
+
+3. Get the 4 seperate projects..
+      1. DS_Desktop_client-master-3
+      2. SensorClient
+      3. ds-assignment-rest-api
+      4. ds-assignment-web-client copy
+      
+4. Create the database in mySQL with the name ds-api (The database script is given in the repository)
+
+5. Start MySQL database and Apache server in XAMPP
+
+6. Deploying and running the RestAPI 
+    1. open the project ds-assignment-rest-api in webstorm or any other IDE
+    2. In the terminal, inside the project folder, run node server.js (This should be running throughout the process) 
+    
+7. Running the Web client
+    1. Open the project ds-assignment-web-client copy in webstorm or any other IDE in a seperate window 
+    2. In the terminal, inside the project folder, run "npm install"
+    3. Then run "npm start"   
+    
+8. Deploying and running the desktop client
+   1. Open the project DS_Desktop_client-master-3 in Eclipse
+   2. 3 project folders will open 
+       a. DS_Desktop_client-master-3
+       b. Server
+       c. Client
+   3. Configure the Build path in Server and Client (Since some of the codes are compiled using Java SE12, its preferrable to use Java SE12)
+      a. Change the ModulePath and the classpaths
+   4. After everything is configured, Open the project in the terminal
+      a. Go to the Server/bin folder
+      b. Run "rmic ReadRESTAPI" command. (Ignore the warnings)
+      c. A new class "ReadRESTAPI_Stub.class will be created.
+      d. Copy that class file from the Server/bin in eclipse and copy it to Client/bin folder.
+      e. Go back to the terminal and run 'rmiregistry &' (mac) or 'start rmiregistry' (windows).
+    5. In eclipse, Run the Server project as an Java application - if success a message "Server started" will be printed on the console
+    6. Then run the Client project as an Java application and the GUI will be displayed.(Multiple clients can be run)
+        * To login as an admin, username: admin , password: admin
+
+9. Deploying and running the Dummy Sensor client
+    1. Open the project SensorClient in Eclipse
+    2. Build path
+    3. Run as a Java application.
