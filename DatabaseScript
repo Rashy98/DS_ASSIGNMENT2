@@ -1,0 +1,9 @@
+
+CREATE TABLE Sensors (
+    Id int AUTO_INCREMENT PRIMARY KEY,
+    floorNo int ,
+    roomNo varchar(10),
+    smokeLevel int,
+    Co2Level int,
+    status varchar(10)
+)
